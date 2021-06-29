@@ -11,12 +11,13 @@ By default, with no parameters provided it does nothing - just shows average OSD
 Also, the balancer is designed with the possibility to be executed from Cron with minimal output, but I personally prefer to control my cluster in full and to run the balancer only manually.
 
 ## Available options
-> ./balancer.php -h
+```
+./balancer.php -h
 Usage: ./balancer.php [options]
 
->  Available options (all are optional)
+Available options (all are optional)
 
-> --apply			Send generated commands to Ceph cluster. Works only if there are no misplaced or degraded objects. Default: false
+  --apply			Send generated commands to Ceph cluster. Works only if there are no misplaced or degraded objects. Default: false
   --apply-while-rebuild		Send generated commands to Ceph cluster even if there are misplaced or degraded objects in cluster. Default: false
   --decrease-only		Only decrease most loaded OSD weights. Default: false
   --increase-only		Only increase less loaded OSD weights. Default: false
@@ -26,3 +27,5 @@ Usage: ./balancer.php [options]
   --class=osd_classname		Reweight only OSDs of that class. Default: all classes
   --quiet|-q			Quiet output, useful for Cron execution. Default: false
   --help|-h			This help page
+
+```
